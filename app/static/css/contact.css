@@ -1,0 +1,98 @@
+.container{
+    text-align: center;
+    padding: 30px 0;
+    width: 65%;
+    margin: 0 auto;
+    padding-bottom: 90px;
+    
+}
+
+.container p:first-of-type{
+    font-size: 60px;
+    font-weight: 700;
+}
+.container p:nth-of-type(2) {
+    font-size: 22px;
+    font-weight: 400;
+    word-break: break-all;
+    padding-bottom: 25px;
+
+}
+.contact-cart{
+    background-color: white;
+    padding: 25px;
+    border: 1px #BABABA solid;
+    border-radius: 8px;
+    text-align:start;
+}
+.messaj-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+label{
+    font-size: 16px;
+    font-weight: 500;
+    word-break: break-all;
+}
+
+
+.messaj-info input{
+    border: 1px #aaaaaa solid;
+    border-radius: 5px;
+    height: 36px;
+    width: 220px;
+    padding-left:3px;
+}
+
+.messaj-info input::placeholder{
+    font-size: 14px;
+}
+
+input:focus ,textarea:focus{
+    outline: none;
+    border-color: #4f4f4f;
+}
+.message-content textarea{
+    border: 1px #aaaaaa solid;
+    border-radius: 5px;
+    padding-left:3px;
+    padding-top:3px;
+
+}
+
+.message-content textarea::placeholder{
+    font-size: 14px;
+}
+
+.message-content{
+    padding-bottom: 20px;
+}
+
+
+span{
+    color: #7200C9;
+}
+.btn-msg{
+    text-align: right;
+}
+
+.btn-msg button{
+    background-color: #7200C9;
+    border-radius: 5px;
+    color: white;
+    border-color: transparent;
+    font-size: 15px;
+    font-weight: 500;
+    word-wrap: break-word;
+    padding: 10px 100px;
+    cursor: pointer;
+
+
+}

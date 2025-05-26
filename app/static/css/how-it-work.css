@@ -1,0 +1,61 @@
+.container{
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.container p:first-of-type{
+    font-size: 20px;
+    font-weight: 500;
+    color: #8D8D8D;
+    padding: 40px 0;
+}
+
+.container p:first-of-type span{
+    font-weight: 700;
+    color: #858585;
+    font-size: 20px;
+}
+
+.container p:nth-of-type(2){
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 20px;
+    word-wrap: break-word;
+}
+
+.container p:nth-of-type(2) span{
+    font-size: 20px;
+    font-weight: 700;
+    color: #7200C9;
+}
+
+.container p:nth-of-type(3){
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom:20px;
+    word-wrap: break-word;
+}
+
+
+.how-it-work-content{
+    display: flex;
+    padding: 0 200px 90px;
+
+}
+
+.ok p{
+    margin-bottom: -40px;    
+}
+
+.work-step p:nth-of-type(2){
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.work-step p:nth-of-type(3){
+    font-size: 16px;
+    font-weight: 400;
+    width: 140%;
+    margin-left: -20%;
+}

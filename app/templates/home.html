@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+{% block body %}
+  {% include "partials/navbar.html" %}
+  <div class="container">
+    <div>
+      <p> Sahte Videoları <span>Tara</span> ve <span>Tespit Et</span></p>
+      <p>Şüpheli bir videoyu tarayarak sentetik olarak<br>
+        manipüle edilip edilmediğini öğrenin.</p>
+        <button onclick="window.location.href='{{ url_for('upload_video') }}'">Algılamayı Başlat</button>
+    </div>
+    <div>
+      <img src="{{ url_for('static', filename='images/deepfake-image.png') }}" alt="background image">
+    </div>
+  </div>
+{% endblock %}

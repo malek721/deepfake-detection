@@ -1,0 +1,32 @@
+{% extends "main.html" %}
+{% block body %}
+{% include "partials/navbar.html" %}
+<div class="container">
+    <p>Deepfake Videolarını Tara ve Algıla</p>
+    <p>Bir video bağlantısı yerleştir veya bir video yükle</p>
+
+
+    <form id="upload-form" action="{{ url_for('upload_video') }}" method="POST" enctype="multipart/form-data">
+        <div class="input-wrapper">
+            <input type="text" id="video-path" class="video-link" placeholder="https://www.example.com/" readonly>
+            <button type="button" class="submit-button" onclick="document.getElementById('video-upload').click()">
+                <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.55867 21.6458C1.82928 21.6458 1.22075 21.4019 0.733083 20.9142C0.245416 20.4266 0.00105556 19.8175 0 19.0871V16.0423C0 15.8175 0.0754724 15.6296 0.226417 15.4787C0.377361 15.3277 0.565778 15.2517 0.791667 15.2507C1.01756 15.2496 1.20597 15.3256 1.35692 15.4787C1.50786 15.6317 1.58333 15.8196 1.58333 16.0423V19.0871C1.58333 19.3309 1.68467 19.5547 1.88733 19.7584C2.09 19.9621 2.31325 20.0635 2.55708 20.0624H19.6096C19.8524 20.0624 20.0756 19.9611 20.2793 19.7584C20.4831 19.5557 20.5844 19.332 20.5833 19.0871V16.0423C20.5833 15.8175 20.6588 15.6296 20.8097 15.4787C20.9607 15.3277 21.1491 15.2517 21.375 15.2507C21.6009 15.2496 21.7893 15.3256 21.9403 15.4787C22.0912 15.6317 22.1667 15.8196 22.1667 16.0423V19.0871C22.1667 19.8165 21.9228 20.425 21.4352 20.9127C20.9475 21.4003 20.3384 21.6447 19.608 21.6458H2.55867ZM10.2917 2.53017L7.17092 5.65092C7.01681 5.80503 6.83367 5.88578 6.6215 5.89317C6.40933 5.90056 6.21617 5.81664 6.042 5.64142C5.87311 5.46725 5.78708 5.28094 5.78392 5.0825C5.78075 4.883 5.86678 4.69617 6.042 4.522L10.1872 0.373667C10.3265 0.236445 10.4679 0.139861 10.6115 0.0839166C10.7561 0.0279722 10.9134 0 11.0833 0C11.2533 0 11.4106 0.0279722 11.5552 0.0839166C11.6998 0.139861 11.8412 0.236972 11.9795 0.37525L16.1247 4.522C16.2798 4.67611 16.3611 4.85767 16.3685 5.06667C16.3748 5.27567 16.2941 5.46725 16.1262 5.64142C15.951 5.81664 15.7626 5.90583 15.561 5.909C15.3594 5.91217 15.171 5.82614 14.9957 5.65092L11.875 2.53017V15.4343C11.875 15.6602 11.7995 15.8486 11.6486 15.9996C11.4976 16.1505 11.3092 16.226 11.0833 16.226C10.8574 16.226 10.669 16.1505 10.5181 15.9996C10.3671 15.8486 10.2917 15.6602 10.2917 15.4343V2.53017Z"
+                          fill="#7200C9"/>
+                </svg>
+            </button>
+            <input type="file" name="video" id="video-upload" accept="video/*" style="display: none;" required>
+        </div>
+        <button type="submit" class="algila-btn" onclick="window.location.href='{{url_for('result')}}'">Algıla</button>
+    </form>
+</div>
+<script>
+    document.getElementById('video-upload').addEventListener('change', function () {
+        const file = this.files[0];
+        if (file) {
+            document.getElementById('video-path').value = file.name;
+        }
+    });
+</script>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+{% block body %}
+{% include "partials/navbar.html" %}
+<div class="container">
+    {% if filename %}
+        <video width="400" height="200" controls style="display: block; margin: 0 auto; border-radius: 10px;">
+            <source src="{{ url_for('static', filename='uploaded_videos/' ~ filename) }}" type="video/mp4">
+            Tarayıcınız video öğesini desteklemiyor.
+        </video>
+    {% else %}
+        <div style="width: 400px;height:200px;background-color:blueviolet;margin:0 auto;border-radius: 10px;"></div>
+    {% endif %}
+
+    {% if deepfake_rate is not none and final_result is not none %}
+        <p>Videoda Deepfake oranı: {{ deepfake_rate }}%</p>
+        <p>{{ final_result }}</p>
+    {% else %}
+        <p>Sonuçlar işleniyor veya mevcut değil.</p>
+    {% endif %}
+</div>
+{% endblock %}

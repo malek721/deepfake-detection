@@ -1,0 +1,38 @@
+.container{
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+span{
+    color: #7200C9;
+}
+
+.container > div:first-child > p:first-of-type,span{
+    font-Size: 34px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.container > div:first-child > p:last-of-type{
+    font-Size: 23px;
+    font-Weight: 400;
+    word-wrap: break-word;
+    padding-bottom: 100px;
+}
+
+.container button{
+    background-color: #7200C9;
+    outline: none;
+    border-radius: 10px;
+    border-color: transparent;
+    padding: 16px 60px;
+    color: white;
+    font-Size: 24px;font-weight: 500;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: #4a0081;
+
+}

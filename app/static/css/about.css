@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 135px;
+}
+
+
+.container div:first-of-type{
+    padding-left: 50px;
+}
+.container div:first-of-type p:first-of-type{
+    font-size: 60px;
+    font-weight: 600;
+    color:#7200C9DE;
+    word-wrap: break-word;
+    width: 100%;
+}
+
+.container div:first-of-type p:last-of-type{
+    font-size: 24px;
+    font-weight: 500;
+    padding-right:100px ;
+}
+
+.container div:last-of-type{
+   padding-right: 50px;
+}
+.container div:last-of-type video{
+     border: none;
+ }

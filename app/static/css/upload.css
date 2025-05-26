@@ -1,0 +1,76 @@
+.container {
+    text-align: center;
+    padding-top: 80px;
+}
+p{
+    font-Size: 26px;
+    font-Weight: 500;
+    word-Wrap: break-word;
+}
+
+.container p:first-of-type{
+    padding-bottom: 20px;
+}
+
+.container p:nth-child(2){
+    padding-bottom: 70px;
+}
+.container form{
+    padding-bottom: 50px;
+}
+.container .video-link{
+    outline: none;
+    border-radius: 10px;
+    border-color: #cecece8d;
+    width: 430px;
+    height: 47px;
+    padding-left: 20px;
+}
+
+.container .video-link::placeholder {
+    color: gray;
+    font-size: 14px;
+    opacity: 0.7;
+}
+.container .algila-btn{
+    background-color: #7200C9;
+    outline: none;
+    border-radius: 10px;
+    border-color: transparent;
+    padding: 16px 115px;
+    color: white;
+    font-Size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.container .algila-btn:hover {
+    background-color: #4a0081;
+
+}
+
+.submit-button{
+    background-color: transparent;
+    color: #7200C9;
+    border: none;
+    cursor: pointer;
+}
+
+.input-wrapper {
+    position: relative;
+}
+.algila-btn{
+    margin-top: 30px;
+}
+.submit-button {
+    position: absolute;
+    top: 50%;
+    margin-left: -50px;
+    transform: translateY(-40%);
+    border: none;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+  }
